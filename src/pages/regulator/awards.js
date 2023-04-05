@@ -1,5 +1,5 @@
-import RegulatorDataGridAll from '@/components/BidDataGridRegulator'
-
+import { RegulatorDataGridAll } from '@/components/BidDataGridRegulator'
+import RegulatorLayout from '@/components/regulatorLayout'
 
 export default function Awards() {
     return (
