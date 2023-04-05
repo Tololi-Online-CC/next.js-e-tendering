@@ -171,7 +171,7 @@ export const useFetch = (url) => {
     return {loading, error, data};
 }
 
-export const useFetchDetail = (id) => {
+export const useFetchDetail = (id_) => {
     const data = {
         data: [
             {
@@ -313,11 +313,12 @@ export const useFetchDetail = (id) => {
                 total: 10
             }
         }
-    }
-    const error = false
-    const loading = false
+    };
+    const error = false;
+    const loading = false;
 
-    const prod_data = data.data[id-1]
+    
+    const prod_data = data.data[id_-1];
 
     return {loading, error, prod_data};
 }
