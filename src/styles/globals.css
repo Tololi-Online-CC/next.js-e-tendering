@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +104,595 @@ a {
   html {
     color-scheme: dark;
   }
+} */
+
+:root {
+  --yellow: #ffc90a;
+  --black: black;
+  --white: white;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.site-header {
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header span {
+  padding: 0 20px;
+  font-size: 16px;
+  color: var(--white);
+}
+.site-header img {
+  width: 60px;
+  height: auto;
+  padding: 5px 20px;
+}
+.site-header span:hover {
+  padding: 0 20px;
+  color: var(--yellow);
+  opacity: 1;
+}
+.link {
+  padding: 0 20px;
+  font-size: 16px;
+  color: var(--black);
+  display: inline-block;
+  margin: 40px 60px 0px;
+  cursor: pointer;
+}
+.link:hover {
+  padding: 0 20px;
+  color: var(--yellow);
+  opacity: 1;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {color: var(--yellow);}
+.second-head {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  background-color: #111;
+  overflow: hidden;
+}
+.second-head span {
+  padding: 0 50px;
+  font-size: 14px;
+  color: var(--white);
+}
+.second-head span:hover {
+  color: var(--yellow);
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 40%;
+  height: auto;
+  margin: 50px auto 20px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form .input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form .input-large {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  height: 60px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: var(--black);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: var(--yellow) ;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: var(--yellow) ;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.my-account-form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 85%;
+  height: auto;
+  margin: 20px auto 20px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.my-account-form .input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.my-account-form .input-large {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  height: 60px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.my-account-form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: var(--black);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.my-account-form button:hover,.form button:active,.form button:focus {
+  background: var(--yellow) ;
+}
+.bid-request-card {
+  background: #fff;
+  margin: 20px auto;
+  padding: 1px 20px 20px 90px;
+  position: relative;
+  width: 80%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.bid-request-card h2{
+  margin-bottom: 0;
+}
+.bid-request-card small {
+  margin: 5px 0;
+  color: #777;
+}
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.grid-tool-bar {
+  float:right;
+  color: black;
+}
+.-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proposal_button {
+  background-color: var(--black);
+  height: 50px;
+  width: 150px;
+  color: var(--white);
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+.proposal_button:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+.approve-button {
+  background-color: #90EE90;
+  height: 50px;
+  width: 120px;
+  color: var(--black);
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 10px;
+  border: none;
+}
+.approve-button:hover {
+  background-color: greenyellow;
+  color: var(--black);
+}
+.reject-button {
+  background-color: #ff6961;
+  height: 50px;
+  width: 120px;
+  color: var(--black);
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 10px;
+  border: none;
+}
+.reject-button:hover {
+  background-color: orangered;
+  color: var(--black);
+}
+.dashboard {
+  margin: 0 50px;
+}
+.analytics {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.analytics .card {
+  width: 85%;
+  height: 120px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 5px;
+}
+.analytics .card h2 {
+  font-size: 40px;
+  margin: 0;
+}
+.all-bids-header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.all-bids-header .link {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+.all-bids-header span {
+  padding-left: 20px;
+  font-size: 16px;
+  color: var(--black);
+  display: inline;
+}
+.all-bids-header span:hover {
+  color: var(--yellow);
+  opacity: 1;
+}
+.dashboard-bid-card {
+  display: grid;
+  /* id name company description duedate */
+  grid-template-columns: 5% 20% 20% 30% 15% 10%; 
+  height: 50px;
+  padding: 0 20px;
+  margin-top: 10px;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 5px;
+}
+.dashboard-bid-card span:nth-child(even){
+  color: gray;
+}
+.announcements-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 10px 20px;
+  margin-top: 10px;
+  /* align-items: center; */
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 5px;
+  
+}
+.announcements-card h3 {
+  margin: 0;
+}
+.yellow-hover {
+  color: var(--black);
+  text-decoration: underline;
+}
+.yellow-hover:hover {
+  color: var(--yellow);
+}
+.projects {
+  margin: 0 50px;
+}
+.projects h1{
+  margin-bottom: 0;
+}
+.project-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+.add-event-button {
+  width: auto;
+  height: 40px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+}
+.add-event-button:hover {
+  background-color: var(--yellow);
+  cursor: pointer;
+}
+.regulator {
+  display: grid;
+  grid-template-columns: 17% auto;
+  margin: 0;
+  height: 80vh;
+}
+.regulator-sidebar {
+  position: relative;
+  left:0;
+  height:80vh;
+  bottom:0;
+  background: #111;
+  /* background-color: #D3D3D3; */
+  padding:20px;
+  z-index:9;
+  color:#fff;
+  transition:0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.regulator-sidebar h3 {
+  text-decoration: none; 
+  color: var(--smoke); 
+  display: block; 
+  font-weight: 600; 
+  font-size: 34px; 
+  font-family: 'Poppins', sans-serif;
+}
+.regulator-sidebar a {
+  display:block;
+  padding:10px;
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid #555;
+  /* background-color: var(--yellow); */
+  border-radius: 5px;
+  cursor: pointer;
+}
+.regulator-sidebar a:hover {
+  /* background-color: var(--yellow); */
+  border-bottom: 1px solid var(--yellow);
+}
+.regulator-sidebar button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: var(--yellow);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: var(--black);
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.regulator-main {
+  height: 85vh;
+  overflow-y: scroll;
+  margin: 0;
+  bottom: 0;
+}
+.h2-padding {
+  padding-left: 20px;
+}
+.action-btn-review {
+  color: var(--black);
+  /* background-color: #FFD580; */
+  background-color: var(--yellow);
+  margin: 0 2px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 25px;
+}
+.action-btn-approve {
+  color: var(--white);
+  background-color: #90EE90;
+  margin: 0 2px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 25px;
+}
+.action-btn-reject {
+  color: var(--white);
+  background-color: #ff6961;
+  margin: 0 2px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 25px;
+}
+.action-btn-view {
+  color: var(--black);
+  background-color: #90EE90;
+  margin: 0 2px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 25px;
+}
+.bid-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 25px 0 0;
+}
+.filter-a {
+  padding: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.my-account {
+  display: grid;
+  grid-template-columns: 30% auto;
+}
+.circular-img {
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border: 1px solid grey;
+}
+.account-side {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+  margin-top: 20px;
+  width: 80%;
+  background-color: #fff;
+  /* border-radius: 5px; */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.account-side h3 {
+  margin: 20px 0 0;
+}
+.moneda-image {
+  height: auto;
+  max-width: 500px;
+}
+.finance-banner {
+  height: 80vh;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn-finance {
+  height: 50px;
+  width: auto;
+  margin: 20px 0 0;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  border: none;
+}
+.btn-finance:hover {
+  background-color: var(--yellow);
+}
+.finance-banner h2 {
+  padding: 0 50px 0;
+  margin: 30px 0 0;
+  color: white;
+  text-align: center;
 }
