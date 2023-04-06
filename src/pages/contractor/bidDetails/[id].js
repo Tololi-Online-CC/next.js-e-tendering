@@ -14,62 +14,28 @@ export default function bidDetails() {
     if (loading) return (<Layout><p>Loading...</p></Layout>)
     if (error) return (<Layout><p>Error</p></Layout>)
 
-
+    async function buttonClick() {
+        const { value: file } = await Swal.fire({
+            title: 'Place a proposal',
+            html: '<h4>Please upload a zip folder of your proposal documents</h4>\n<p>The zipped folder should include all requiremnts under Eligibility Criteria</p>',
+            input: 'file',
+            confirmButtonColor: '#000000',
+            confirmButtonText: 'Submit proposal',
+            inputAttributes: {
+                'accept': 'zip/',
+                'aria-label': 'Upload your proposal document'
+            }
+        })
+        if (file) {
+            Swal.fire({
+                title: 'Submited!',
+                text: 'Your proposal has been successfuly submited.',
+                icon: 'success',
+                confirmButtonColor: '#000000',
+            })
+        }
+    }
     if (prod_data) {
-        function success() {
-            Swal.fire({
-                title: 'Are you sure you want to approve this RFQ?',
-                showDenyButton: true,
-                confirmButtonText: 'Yes',
-                denyButtonText: `Cancel`,
-                confirmButtonColor: '#000000'
-            }).then((result) => {
-                /* Read more about isConfirmed, isDenied below */
-                if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'The RFQ has been approved!',
-                        message: '', 
-                        icon: 'success',
-                        confirmButtonColor: '#000000',
-                    })
-                } else if (result.isDenied) {
-                    Swal.fire({
-                        title: 'Failed to approve RFQ!',
-                        message: '', 
-                        icon: 'info',
-                        confirmButtonColor: '#000000',
-                    })
-                }
-            })
-        }
-    
-        function reject() {
-            Swal.fire({
-                title: 'Are you sure you want to reject this RFQ?',
-                showDenyButton: true,
-                confirmButtonText: 'Yes',
-                denyButtonText: `Cancel`,
-                confirmButtonColor: '#000000'
-            }).then((result) => {
-                /* Read more about isConfirmed, isDenied below */
-                if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'The RFQ has rejected!',
-                        message: '', 
-                        icon: 'success',
-                        confirmButtonColor: '#000000',
-                    })
-                } else if (result.isDenied) {
-                    Swal.fire({
-                        title: 'Failed to reject RFQ!',
-                        message: '', 
-                        icon: 'info',
-                        confirmButtonColor: '#000000',
-                    })
-                }
-            })
-        }
-    
         return (
             <Layout>
                 <div>
@@ -141,8 +107,7 @@ export default function bidDetails() {
                         </ol>
                     </div>
                     <div className='-center'>
-                        <button className='approve-button' style={{ marginBottom: "20px" }} onClick={success}>Approve</button>
-                        <button className='reject-button' style={{ marginBottom: "20px" }} onClick={reject}>Reject Proposal</button>
+                        <button className='proposal_button' style={{ marginBottom: "20px" }} onClick={buttonClick}>Place Proposal</button>
                     </div>
                 </div>
             </Layout>
