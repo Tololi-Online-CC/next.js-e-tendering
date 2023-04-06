@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 
 export default function Home() {
@@ -12,7 +13,41 @@ export default function Home() {
 
     navigate.push('/contractor/dashboard');
   };
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
 
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+
+  console.log(windowSize.width)
+
+  if(windowSize.width) {
+    if(windowSize.width < 767){
+      return (
+        <div className='mobile'>
+          <img src='logo.png'></img>
+          <h1>Currently not available on mobile</h1>
+        </div>
+      )
+    }
+  }
+
+  
   return (
     <>
       <Head>
