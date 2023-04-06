@@ -139,7 +139,7 @@ code {
   text-align: center;
   text-transform: uppercase;
   padding: 20px;
-  position: fixed;
+  overflow: hidden;
 }
 .mobile img {
   width: 150px;
