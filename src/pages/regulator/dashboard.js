@@ -52,7 +52,7 @@ export default function Dashboard() {
         </div>
         <div className='all-bids'>
           <div className='all-bids-header'>
-            <h2>Pending RF</h2>
+            <h2>Pending RFQs</h2>
             <Link href={"/regulator/contracts"} style={{ textDecoration: 'none' }}><span>See all pending <ion-icon name="arrow-forward-outline"></ion-icon></span></Link>
           </div>
           <div className='dashboard-bid-card'>
