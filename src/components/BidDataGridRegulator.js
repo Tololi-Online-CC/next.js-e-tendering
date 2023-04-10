@@ -353,14 +353,13 @@ export function RegulatorDataGridUsers() {
     ]
 
     const columns = [
-        { field: 'id', headerName: 'ID', width: 150 },
-        { field: 'operator_name', headerName: 'Name', width: 300 },
-        { field: 'Category', headerName: 'Category', width: 300 },
+        { field: 'id', headerName: 'ID', flex: 1 },
+        { field: 'operator_name', headerName: 'Name', flex: 1 },
+        { field: 'Category', headerName: 'Category', flex: 1 },
         {
-            field: 'actions', headerName: 'Actions', width: 150, renderCell: (params) => {
+            field: 'actions', headerName: 'Actions', flex: 1, renderCell: (params) => {
                 return <>
                     <button className='action-btn-view'>View</button>
-                    {/* <button className='action-btn-approve'>Approve</button> */}
                 </>
             }
         }
@@ -391,7 +390,7 @@ export function RegulatorDataGridUsers() {
                     disableColumnSelector
                     checkboxSelection
                     disableRowSelectionOnClick
-                    onRowClick={(rowData) => navigate.push(`/bid_detail/${rowData.id}`)}
+                    // onRowClick={(rowData) => navigate.push(`/bid_detail/${rowData.id}`)}
                     slots={{
                         toolbar: CustomToolbar
                     }}
