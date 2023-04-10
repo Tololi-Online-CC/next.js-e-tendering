@@ -118,7 +118,7 @@ export default function Projectpage() {
           </button>
         </div> */}
 
-        <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: "80vh", marginBottom: "40px" }} />
+        <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" className="calendar" style={{ height: "80vh" }}/>
       </div>
     </Layout>
 

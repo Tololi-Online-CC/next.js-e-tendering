@@ -10,13 +10,13 @@ export function RegulatorDataGridPending() {
     if (error) return <p>Error</p>
 
     const columns = [
-        { field: 'id', headerName: 'ID', width: 45 },
-        { field: 'request_title', headerName: 'Tittle', width: 150 },
-        { field: 'Category', headerName: 'Category', width: 150 },
-        { field: 'Company', headerName: 'Company', width: 100 },
-        { field: 'request_description', headerName: 'Description', width: 300 },
+        { field: 'id', headerName: 'ID', flex:0 },
+        { field: 'request_title', headerName: 'Tittle', flex:1 },
+        { field: 'Category', headerName: 'Category', flex:1 },
+        { field: 'Company', headerName: 'Company', flex:1 },
+        { field: 'request_description', headerName: 'Description', flex:2 },
         {
-            field: 'actions', headerName: 'Actions', width: 150, renderCell: (params) => {
+            field: 'actions', headerName: 'Actions', flex:1, renderCell: (params) => {
                 return <>
                     <button className='action-btn-review'>Review Application</button>
                     {/* <button className='action-btn-reject'>Reject</button> */}
@@ -57,6 +57,7 @@ export function RegulatorDataGridPending() {
                     }}
                     rows={rows}
                     columns={columns}
+                    responsive={true}
                     pageSize={10}
                     rowsPerPageOptions={[10]}
                     className='styled-table'
@@ -74,11 +75,11 @@ export function RegulatorDataGridAll() {
     if (error) return <p>Error</p>
 
     const columns = [
-        { field: 'id', headerName: 'ID', width: 90 },
-        { field: 'request_title', headerName: 'Tittle', width: 150 },
-        { field: 'Category', headerName: 'Category', width: 150 },
-        { field: 'Company', headerName: 'Company', width: 150 },
-        { field: 'request_description', headerName: 'Description', width: 350 },
+        { field: 'id', headerName: 'ID', flex: 0 },
+        { field: 'request_title', headerName: 'Tittle', flex: 1 },
+        { field: 'Category', headerName: 'Category', flex: 1 },
+        { field: 'Company', headerName: 'Company', flex: 1 },
+        { field: 'request_description', headerName: 'Description', flex: 2 },
     ]
 
     const rows = data.data.map((row) => ({
@@ -131,13 +132,13 @@ export function RegulatorDataGridRejected() {
     if (error) return <p>Error</p>
 
     const columns = [
-        { field: 'id', headerName: 'ID', width: 45 },
-        { field: 'request_title', headerName: 'Tittle', width: 150 },
-        { field: 'Category', headerName: 'Category', width: 150 },
-        { field: 'Company', headerName: 'Company', width: 100 },
-        { field: 'request_description', headerName: 'Description', width: 300 },
+        { field: 'id', headerName: 'ID', flex: 0 },
+        { field: 'request_title', headerName: 'Tittle', flex: 1 },
+        { field: 'Category', headerName: 'Category', flex: 1 },
+        { field: 'Company', headerName: 'Company', flex: 1 },
+        { field: 'request_description', headerName: 'Description', flex: 2 },
         {
-            field: 'actions', headerName: 'Actions', width: 150, renderCell: (params) => {
+            field: 'actions', headerName: 'Actions', flex: 1, renderCell: (params) => {
                 return <>
                     <button className='action-btn-review'>Review Application</button>
                     {/* <button className='action-btn-approve'>Approve</button> */}
@@ -196,13 +197,13 @@ export function RegulatorDataGridApproved() {
     if (error) return <p>Error</p>
 
     const columns = [
-        { field: 'id', headerName: 'ID', width: 45 },
-        { field: 'request_title', headerName: 'Tittle', width: 150 },
-        { field: 'Category', headerName: 'Category', width: 150 },
-        { field: 'Company', headerName: 'Company', width: 100 },
-        { field: 'request_description', headerName: 'Description', width: 300 },
+        { field: 'id', headerName: 'ID', flex: 0 },
+        { field: 'request_title', headerName: 'Tittle', flex: 1 },
+        { field: 'Category', headerName: 'Category', flex: 1 },
+        { field: 'Company', headerName: 'Company', flex: 1 },
+        { field: 'request_description', headerName: 'Description', flex: 2 },
         {
-            field: 'actions', headerName: 'Actions', width: 150, renderCell: (params) => {
+            field: 'actions', headerName: 'Actions', flex: 1, renderCell: (params) => {
                 return <>
                     <button className='action-btn-view'>View Approved</button>
                     {/* <button className='action-btn-approve'>Approve</button> */}

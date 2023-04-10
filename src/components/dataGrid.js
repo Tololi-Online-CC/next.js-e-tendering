@@ -11,12 +11,12 @@ export default function DataGridBid() {
     if (error) return <p>Error</p>
     
     const columns = [
-        {field: 'id', headerName: 'ID', width: 90},
-        {field: 'request_title', headerName: 'Tittle', width: 150},
-        {field: 'Category', headerName: 'Category', width: 150},
-        {field: 'Company', headerName: 'Company', width: 150},
-        {field: 'request_description', headerName: 'Description', width: 350},
-        {field: 'due_date', headerName: 'Due Date', width: 150},
+        {field: 'id', headerName: 'ID', flex: 0},
+        {field: 'request_title', headerName: 'Tittle', flex: 1},
+        {field: 'Category', headerName: 'Category', flex: 1},
+        {field: 'Company', headerName: 'Company', flex: 1},
+        {field: 'request_description', headerName: 'Description', flex: 2},
+        {field: 'due_date', headerName: 'Due Date', flex: 1},
     ]
 
     const rows = data.data.map((row) => ({

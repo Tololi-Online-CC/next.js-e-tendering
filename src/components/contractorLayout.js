@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Layout({ children }) {
     return (
-        <div>
+        <div style={{overflowX: "hidden"}}>
             <div className='site-header'>
                 <Link href='/contractor/dashboard'><img src='/logo.png' alt='Namcor Logo' /></Link>
                 <div>

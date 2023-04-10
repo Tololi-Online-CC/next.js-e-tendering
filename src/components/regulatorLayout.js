@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function RegulatorLayout({ children }) {
 
   return (
-    <div>
-      <div className='site-header'>
+    <div style={{height: '100vh', overflow: "hidden", margin: 0}}>
+      <div className='site-header' id="reg">
         <Link href='/regulator/dashboard'><img src='/logo.png' alt='Namcor Logo' /></Link>
         <div>
           <a href='#' style={{ textDecoration: 'none' }}><span>Categories</span></a>
