@@ -29,7 +29,7 @@ export default function dashboard() {
                             <span>RFQs accepted</span>
                         </div>
                         <div className='card'>
-                            <h2><ion-icon name="close-circle-outline" style={{ color: "#ffc90a" }}></ion-icon> 8</h2>
+                            <h2><ion-icon name="close-circle-outline" style={{ color: "#ffc90a" }}></ion-icon> 6</h2>
                             <span>RFQs rejected</span>
                         </div>
                     </div><br />

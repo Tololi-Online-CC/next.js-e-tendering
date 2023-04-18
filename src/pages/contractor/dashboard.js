@@ -25,7 +25,7 @@ export default function dashboard() {
                             <span>Bids pending</span>
                         </div>
                         <div className='card'>
-                            <h2><ion-icon name="checkmark-circle-outline" style={{ color: "#ffc90a" }}></ion-icon> 0</h2>
+                            <h2><ion-icon name="checkmark-circle-outline" style={{ color: "#ffc90a" }}></ion-icon>1</h2>
                             <span>Bids accepted</span>
                         </div>
                         <div className='card'>
