@@ -58,7 +58,7 @@ export function ContractorDataGridPending() {
                     }}
                     rows={rows}
                     columns={columns}
-                    onRowClick={(rowData) => navigate.push(`/contractor/bidDetails/${rowData.id}`)}
+                    onRowClick={(rowData) => navigate.push(`/contractor/bid/${rowData.id}`)}
                     responsive={true}
                     pageSize={10}
                     rowsPerPageOptions={[10]}
@@ -111,7 +111,7 @@ export function ContractorDataGridAll() {
                     disableColumnSelector
                     checkboxSelection
                     disableRowSelectionOnClick
-                    onRowClick={(rowData) => navigate.push(`/contractor/bidDetails/${rowData.id}`)}
+                    onRowClick={(rowData) => navigate.push(`/contractor/bid/${rowData.id}`)}
                     slots={{
                         toolbar: CustomToolbar
                     }}
@@ -303,7 +303,7 @@ export function ContractorDataGridAwarded() {
                     disableColumnSelector
                     checkboxSelection
                     disableRowSelectionOnClick
-                    onRowClick={(rowData) => navigate.push(`/contractor/bidDetails/${rowData.id}`)}
+                    onRowClick={(rowData) => navigate.push(`/contractor/bid/${rowData.id}`)}
                     slots={{
                         toolbar: CustomToolbar
                     }}

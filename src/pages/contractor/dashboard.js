@@ -81,8 +81,8 @@ export default function dashboard() {
                     </div>
                     <div className='all-bids'>
                         <div className='all-bids-header'>
-                            <h2>Bids</h2>
-                            <Link href="/contractor/rfqs" style={{ textDecoration: 'none' }}><span>See all Bids <ion-icon name="arrow-forward-outline"></ion-icon></span></Link>
+                            <h2>My Bids</h2>
+                            <Link href="/contractor/bids" style={{ textDecoration: 'none' }}><span>See all Bids <ion-icon name="arrow-forward-outline"></ion-icon></span></Link>
                         </div>
                         <div className='dashboard-bid-card'>
                             <span>{bid_details[0].id}</span>
@@ -90,7 +90,7 @@ export default function dashboard() {
                             <span>{bid_details[0].attributes.Category}</span>
                             <span>{bid_details[0].attributes.request_description.slice(0, 26)}...</span>
                             <span>{bid_details[0].attributes.due_date}</span>
-                            <Link href='/contractor/bidDetails/1' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
+                            <Link href='/contractor/bid/1' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
                         </div>
                         <div className='dashboard-bid-card'>
                             <span>{bid_details[1].id}</span>
@@ -98,7 +98,7 @@ export default function dashboard() {
                             <span>{bid_details[1].attributes.Category}</span>
                             <span>{bid_details[1].attributes.request_description.slice(0, 26)}...</span>
                             <span>{bid_details[1].attributes.due_date}</span>
-                            <Link href='/contractor/bidDetails/3' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
+                            <Link href='/contractor/bid/3' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
                         </div>
                         <div className='dashboard-bid-card'>
                             <span>{bid_details[2].id}</span>
@@ -106,7 +106,7 @@ export default function dashboard() {
                             <span>{bid_details[2].attributes.Category}</span>
                             <span>{bid_details[2].attributes.request_description.slice(0, 26)}...</span>
                             <span>{bid_details[2].attributes.due_date}</span>
-                            <Link href='/contractor/bidDetails/4' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
+                            <Link href='/contractor/bid/4' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
                         </div>
                         <div className='dashboard-bid-card'>
                             <span>{bid_details[3].id}</span>
@@ -114,7 +114,7 @@ export default function dashboard() {
                             <span>{bid_details[3].attributes.Category}</span>
                             <span>{bid_details[3].attributes.request_description.slice(0, 26)}...</span>
                             <span>{bid_details[3].attributes.due_date}</span>
-                            <Link href='/contractor/bidDetails/5' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
+                            <Link href='/contractor/bid/5' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
                         </div>
                         <div className='dashboard-bid-card'>
                             <span>{bid_details[4].id}</span>
@@ -122,7 +122,7 @@ export default function dashboard() {
                             <span>{bid_details[4].attributes.Category}</span>
                             <span>{bid_details[4].attributes.request_description.slice(0, 26)}...</span>
                             <span>{bid_details[4].attributes.due_date}</span>
-                            <Link href='/contractor/bidDetails/6' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
+                            <Link href='/contractor/bid/6' style={{ textDecoration: 'none' }}><span className='yellow-hover'>View details</span></Link>
                         </div>
                     </div>
                     <div className='announcements'>
