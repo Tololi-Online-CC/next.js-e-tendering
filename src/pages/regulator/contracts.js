@@ -1,6 +1,7 @@
 import { RegulatorDataGridAll, RegulatorDataGridPending, RegulatorDataGridRejected, RegulatorDataGridApproved } from '@/components/BidDataGridRegulator'
 import { useState } from "react";
 import RegulatorLayout from '@/components/regulatorLayout';
+import addRfq from '@/components/addRfqs';
 
 export default function RegulatorContracts() {
     const [selectedComponent, setSelectedComponent] = useState("");
@@ -55,7 +56,7 @@ export default function RegulatorContracts() {
                     <div>
                         <div className="bid-header">
                             <h2 className='h2-padding'>All RFQs</h2>
-                            <button className='add-event-button' onClick={[]}>Add New RFQ</button>
+                            <button className='add-event-button' onClick={addRfq}>Add New RFQ</button>
                         </div>
                         <NavigateContracts />
                         <RegulatorDataGridAll />

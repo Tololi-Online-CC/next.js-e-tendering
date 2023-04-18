@@ -103,7 +103,7 @@ span, p, a {
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  z-index: 1;
+  z-index: 100;
 }
 
 /* Links inside the dropdown */
@@ -285,6 +285,13 @@ span, p, a {
 .bid-request-card small {
   margin: 5px 0;
   color: #777;
+}
+.bid-received {
+  margin: 20px auto;
+  /* padding: 1px 20px 20px 90px; */
+  position: relative;
+  width: 90%;
+  /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
 }
 .styled-table {
   border-collapse: collapse;
@@ -636,6 +643,12 @@ span, p, a {
   margin: 30px 0 0;
   color: white;
   text-align: center;
+}
+.swal-wide {
+  width: 60vw !important;
+}
+.swal2-textarea, .swal2-input {
+  width: 80% !important;
 }
 @media only screen and (min-width: 1440px) {
   #reg {

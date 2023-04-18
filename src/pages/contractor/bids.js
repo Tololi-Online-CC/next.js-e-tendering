@@ -1,5 +1,5 @@
 import Layout from '@/components/contractorLayout';
-import { RegulatorDataGridAll, RegulatorDataGridPending, RegulatorDataGridRejected, RegulatorDataGridApproved } from '../../components/BidDataGridRegulator'
+import { ContractorDataGridAll, ContractorDataGridPending, ContractorDataGridRejected, ContractorDataGridApproved } from '../../components/DataGridContractor'
 import { useState } from "react";
 
 export default function StatusList() {
@@ -25,7 +25,7 @@ export default function StatusList() {
                     <div>
                         <h2 className='h2-padding'>Bids Pending Approval</h2>
                         <NavigateContracts />
-                        <RegulatorDataGridPending />
+                        <ContractorDataGridPending />
                         <br />
                     </div>
                 </Layout>
@@ -36,7 +36,7 @@ export default function StatusList() {
                     <div>
                         <h2 className='h2-padding'>Bids Approved</h2>
                         <NavigateContracts />
-                        <RegulatorDataGridApproved />
+                        <ContractorDataGridApproved />
                         <br />
                     </div>
                 </Layout>
@@ -47,7 +47,7 @@ export default function StatusList() {
                     <div>
                         <h2 className='h2-padding'>Bids Rejected</h2>
                         <NavigateContracts />
-                        <RegulatorDataGridRejected />
+                        <ContractorDataGridRejected />
                         <br />
                     </div>
                 </Layout>
@@ -58,7 +58,7 @@ export default function StatusList() {
                     <div>
                         <h2 className='h2-padding'>All Bids</h2>
                         <NavigateContracts />
-                        <RegulatorDataGridAll />
+                        <ContractorDataGridAll />
                         <br />
                     </div>
                 </Layout>
@@ -69,7 +69,7 @@ export default function StatusList() {
                     <div>
                         <h2 className='h2-padding'>Bids Pending Approval</h2>
                         <NavigateContracts />
-                        <RegulatorDataGridPending />
+                        <ContractorDataGridPending />
                         <br />
                     </div>
                 </Layout>

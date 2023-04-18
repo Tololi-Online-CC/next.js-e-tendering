@@ -3,7 +3,7 @@ import { useFetch } from '@/pages/api/useFetch'
 import { DataGrid, GridToolbarContainer, GridToolbarQuickFilter, GridToolbarExport } from '@mui/x-data-grid'
 import { useRouter } from 'next/router'
 
-export function RegulatorDataGridPending() {
+export function ContractorDataGridPending() {
     const { loading, error, data } = useFetch('http://localhost:1337/api/bid-requests')
     const navigate = useRouter();
 
@@ -58,7 +58,7 @@ export function RegulatorDataGridPending() {
                     }}
                     rows={rows}
                     columns={columns}
-                    onRowClick={(rowData) => navigate.push(`/regulator/bidDetails/${rowData.id}`)}
+                    onRowClick={(rowData) => navigate.push(`/contractor/bidDetails/${rowData.id}`)}
                     responsive={true}
                     pageSize={10}
                     rowsPerPageOptions={[10]}
@@ -69,7 +69,7 @@ export function RegulatorDataGridPending() {
     )
 }
 
-export function RegulatorDataGridAll() {
+export function ContractorDataGridAll() {
     const { loading, error, data } = useFetch('http://localhost:1337/api/bid-requests')
     const navigate = useRouter();
 
@@ -111,7 +111,7 @@ export function RegulatorDataGridAll() {
                     disableColumnSelector
                     checkboxSelection
                     disableRowSelectionOnClick
-                    onRowClick={(rowData) => navigate.push(`/regulator/bidDetails/${rowData.id}`)}
+                    onRowClick={(rowData) => navigate.push(`/contractor/bidDetails/${rowData.id}`)}
                     slots={{
                         toolbar: CustomToolbar
                     }}
@@ -126,7 +126,7 @@ export function RegulatorDataGridAll() {
     )
 }
 
-export function RegulatorDataGridRejected() {
+export function ContractorDataGridRejected() {
     const { loading, error, data } = useFetch('http://localhost:1337/api/bid-requests')
     const navigate = useRouter();
 
@@ -190,7 +190,7 @@ export function RegulatorDataGridRejected() {
     )
 }
 
-export function RegulatorDataGridApproved() {
+export function ContractorDataGridApproved() {
     const { loading, error, data } = useFetch('http://localhost:1337/api/bid-requests')
     const navigate = useRouter();
 
@@ -253,7 +253,7 @@ export function RegulatorDataGridApproved() {
         </>
     )
 }
-export function RegulatorDataGridAwarded() {
+export function ContractorDataGridAwarded() {
     const { loading, error, data } = useFetch('http://localhost:1337/api/bid-requests')
     const navigate = useRouter();
 
@@ -303,7 +303,7 @@ export function RegulatorDataGridAwarded() {
                     disableColumnSelector
                     checkboxSelection
                     disableRowSelectionOnClick
-                    onRowClick={(rowData) => navigate.push(`/regulator/bidDetails/${rowData.id}`)}
+                    onRowClick={(rowData) => navigate.push(`/contractor/bidDetails/${rowData.id}`)}
                     slots={{
                         toolbar: CustomToolbar
                     }}
@@ -317,7 +317,7 @@ export function RegulatorDataGridAwarded() {
         </>
     )
 }
-export function RegulatorDataGridUsers() {
+export function ContractorDataGridUsers() {
     // const { loading, error, data } = useFetch('http://localhost:1337/api/bid-requests')
     const navigate = useRouter();
 
@@ -327,41 +327,35 @@ export function RegulatorDataGridUsers() {
     let data = [
         {
             id: "1",
-            operator_name: "Total",
+            Contractor_name: "Total",
             Category: "Oil and Gas",
-            type: "Operator"
         },
         {
             id: "2",
-            operator_name: "Chevro",
+            Contractor_name: "Chevro",
             Category: "Oil and Gas",
-            type: "Operator"
         },
         {
             id: "3",
-            operator_name: "Shell",
+            Contractor_name: "Shell",
             Category: "Oil and Gas",
-            type: "Operator"
         },
         {
             id: "4",
-            operator_name: "Total",
+            Contractor_name: "Total",
             Category: "Oil and Gas",
-            type: "Operator"
         },
         {
             id: "5",
-            operator_name: "Tololi",
+            Contractor_name: "Tololi",
             Category: "Green Hydrogen",
-            type: "Contractor"
         }
     ]
 
     const columns = [
         { field: 'id', headerName: 'ID', flex: 1 },
-        { field: 'operator_name', headerName: 'Name', flex: 1 },
-        { field: 'Category', headerName: 'Industry', flex: 1 },
-        { field: 'type', headerName: 'Category', flex: 1 },
+        { field: 'Contractor_name', headerName: 'Name', flex: 1 },
+        { field: 'Category', headerName: 'Category', flex: 1 },
         {
             field: 'actions', headerName: 'Actions', flex: 1, renderCell: (params) => {
                 return <>
@@ -373,9 +367,8 @@ export function RegulatorDataGridUsers() {
 
     const rows = data.map((row) => ({
         id: row.id,
-        operator_name: row.operator_name,
+        Contractor_name: row.Contractor_name,
         Category: row.Category,
-        type: row.type
     }))
 
 

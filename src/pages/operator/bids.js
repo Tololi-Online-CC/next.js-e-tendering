@@ -1,7 +1,7 @@
 import React from 'react'
-import { DataGridBid } from '@/components/dataGrid'
+import { OperatorDataGridBids } from '@/components/DataGridOperator'
 import { useFetch } from '../api/useFetch'
-import Layout from '@/components/contractorLayout'
+import OperatorLayout from '@/components/operatorLayout'
 
 export default function BidsList() {
   const {loading, error} = useFetch('http://localhost:1337/api/bid-requests')
@@ -11,8 +11,8 @@ export default function BidsList() {
 
 
   return (
-    <Layout>
-      <DataGridBid />
-    </Layout>
+    <OperatorLayout>
+      <OperatorDataGridBids />
+    </OperatorLayout>
   )
 }
