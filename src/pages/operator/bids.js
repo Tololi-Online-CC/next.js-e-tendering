@@ -16,7 +16,7 @@ export default function BidList() {
         {/* <span className="filter-a" onClick={() => handleSelection("Pending")}>Pending</span> */}
         <span className="filter-a" onClick={() => handleSelection("Approved")}>Approved</span>
         <span className="filter-a" onClick={() => handleSelection("Rejected")}>Rejected</span>
-        <span className="filter-a" onClick={() => handleSelection("AllBids")}>All RFQs</span>
+        <span className="filter-a" onClick={() => handleSelection("AllBids")}>All Bids</span>
       </div>
     );
   }
