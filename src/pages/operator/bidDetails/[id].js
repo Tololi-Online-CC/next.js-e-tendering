@@ -3,7 +3,7 @@ import { useFetchDetail } from '@/pages/api/useFetch'
 import Swal from 'sweetalert2'
 import OperatorLayout from '@/components/operatorLayout';
 import addRfq from '@/components/addRfqs';
-import { OperatorDataGridAll } from '@/components/DataGridOperator';
+import { OperatorDataGridBids } from '@/components/DataGridOperator';
 
 export default function bidDetails() {
     const router = useRouter();
@@ -115,7 +115,7 @@ export default function bidDetails() {
                     </div>
                     <div className='bid-received'>
                         <h2 style={{ paddingLeft: "20px" }}>Bids Received</h2>
-                        <OperatorDataGridAll />
+                        <OperatorDataGridBids />
                     </div>
                 </div>
             </OperatorLayout>

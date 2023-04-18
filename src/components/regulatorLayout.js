@@ -1,10 +1,14 @@
 import Sidebar from "./Sidebar";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function RegulatorLayout({ children }) {
 
   return (
     <div style={{ height: '100vh', overflow: "hidden", margin: 0 }}>
+      <Head>
+        <title>E-Tendering System || Namcor</title>
+      </Head>
       <div className='site-header' id="reg">
         <Link href='/regulator/dashboard'><img src='/logo.png' alt='Namcor Logo' /></Link>
         <div>

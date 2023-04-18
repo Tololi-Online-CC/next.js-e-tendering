@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Head from 'next/head';
 
 export default function Adminregistration() {
   const navigate = useRouter();
@@ -8,15 +9,18 @@ export default function Adminregistration() {
 
     navigate.push('/regulator/dashboard');
   };
-  
+
   return (
-    <div className='login' style={{padding: "4rem 0"}}> 
-       <form className="form" target="_blank" onSubmit={handleSubmit}>
-          <h2>REGULATOR LOGIN</h2>
-          <input type="email" name="Email" placeholder="Email" className="input" required/><br />
-          <input type="password" name="Password" placeholder="Password" className="input" required/><br />
-          <button className="btn" type="submit">Submit</button>
-        </form>
+    <div className='login' style={{ padding: "4rem 0" }}>
+      <Head>
+        <title>E-Tendering System || Namcor</title>
+      </Head>
+      <form className="form" target="_blank" onSubmit={handleSubmit}>
+        <h2>REGULATOR LOGIN</h2>
+        <input type="email" name="Email" placeholder="Email" className="input" required /><br />
+        <input type="password" name="Password" placeholder="Password" className="input" required /><br />
+        <button className="btn" type="submit">Submit</button>
+      </form>
     </div>
   )
 }

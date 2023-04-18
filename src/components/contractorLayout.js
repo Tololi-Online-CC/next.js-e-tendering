@@ -1,8 +1,12 @@
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Layout({ children }) {
     return (
         <div style={{ overflowX: "hidden" }}>
+            <Head>
+                <title>E-Tendering System || Namcor</title>
+            </Head>
             <div className='site-header'>
                 <Link href='/contractor/dashboard'><img src='/logo.png' alt='Namcor Logo' /></Link>
                 <div>
