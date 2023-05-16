@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
 import { useFetchDetail } from '@/pages/api/useFetch'
 import Swal from 'sweetalert2'
-import OperatorLayout from '@/components/operatorLayout';
 import Link from 'next/link';
+import Layout from '@/components/contractorLayout';
 
 export default function bidDetails() {
     const router = useRouter();
@@ -71,7 +71,7 @@ export default function bidDetails() {
         }
 
         return (
-            <OperatorLayout>
+            <Layout>
                 <div>
                     <span className="link" onClick={goBack}><ion-icon name="arrow-back-outline"></ion-icon> Back</span>
                     <div className="bid-request-card">
@@ -87,7 +87,7 @@ export default function bidDetails() {
                         </p><br />
                     </div>
                 </div>
-            </OperatorLayout>
+            </Layout>
         )
     }
 }
