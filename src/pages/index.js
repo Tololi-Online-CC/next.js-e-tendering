@@ -59,6 +59,7 @@ export default function Home() {
       return (
         <div className='mobile'>
           <img src='logo.png'></img>
+          <br />
           <h1>Currently not available on mobile</h1>
         </div>
       )

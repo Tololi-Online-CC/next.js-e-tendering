@@ -34,7 +34,7 @@ span, p, a {
   font-size: 1.25vw;
 }
 .mobile {
-  background-color: grey;
+  background-color: #1E1E1E;
   color: #fff;
   display: flex;
   width: 100vw;
